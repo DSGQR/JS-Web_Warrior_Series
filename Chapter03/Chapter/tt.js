@@ -46,8 +46,9 @@ function addCalendarDates() {
 }
 
 /* --------------------------------------------------
-Function to place opponents value in second p element
-within each table data cell that has an id
+Function to place opponents and gameLocation values
+in second p element within each table data cell that 
+has an id
  -------------------------------------------------- */ 
  function addGameInfo() {
     var paragraphs = "";
@@ -55,7 +56,16 @@ within each table data cell that has an id
       var date = i + 1;
       var tableCell = document.getElementById("08-" + date);
       paragraphs = tableCell.getElementsByTagName("p");
-      paragraphs[1].innerHTML = opponents[i];
+      
+      if (gameLocation[i] === "away") {
+        paragraphs[1].innerHTML = "@ ";
+      }
+
+      if (gameLocation[i] === "home") {
+        paragraphs[1].innerHTML = "vs ";
+      }
+
+      paragraphs[1].innerHTML += opponents[i];
     }
  }
 
