@@ -57,12 +57,21 @@ has an id
       var tableCell = document.getElementById("08-" + date);
       paragraphs = tableCell.getElementsByTagName("p");
       
+      /* If Else Statement
       if (gameLocation[i] === "away") {
         paragraphs[1].innerHTML = "@ ";
-      }
-
-      if (gameLocation[i] === "home") {
+      } else if (gameLocation[i] === "home") {         
         paragraphs[1].innerHTML = "vs ";
+      } 
+      */ 
+    //  Switch Case
+      switch (gameLocation[i]) {
+        case "away":
+          paragraphs[1].innerHTML = "@ ";
+          break;
+        case "home":
+          paragraphs[1].innerHTML = "vs ";
+          break;
       }
 
       paragraphs[1].innerHTML += opponents[i];
@@ -76,5 +85,12 @@ function setUpPage() {
   addGameInfo();
 }
 
-// runs setUpPage() function when page loads
-window.addEventListener("load", setUpPage, false);
+/* ---------------------------------------
+Runs setUpPage() function when page loads
+Note: Backwards Compatible 
+--------------------------------------- */
+if (window.addEventListener) {
+  window.addEventListener("load", setUpPage, false);
+} else if (window.attachEvent) {
+  window.attachEvent("onload", setUpPage);
+}
