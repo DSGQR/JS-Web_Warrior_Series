@@ -6,8 +6,8 @@
       Chapter 5
       Hands-on Project 5-2
 
-      Author: 
-      Date:   
+      Author: Daniel Amini
+      Date:   03/17/2020
 
       Filename: index.htm
    -->
@@ -52,5 +52,35 @@
      </form>
 
    </article>
+   <script>
+     // Hands-On Project 5-2: Step 2
+     function processInput() {
+       var propertyWidth = 300;
+       var propertyHeight = 100;
+       var winLeft = ((screen.width - propertyWidth) / 2);
+       var winTop = ((screen.height) / 2);
+       var winOptions = 'width = 300, hegiht = 100';
+       winOptions += ',left' + winLeft;
+       winOptions += ',top' + winTop;
+       window.open('confirm.htm', 'confirm', winOptions);
+     }
+
+     // Hands-On Project 5-2: Step 3
+     function createEventListener() {
+       var submitButton = document.getElementById('submit');
+       if (submitButton.addEventListener) {
+         submitButton.addEventListener('click', processInput, false);
+       } else if (submitButton.attachEvent) {
+         submitButton.attachEvent('onclick', processInput);
+       }
+     }
+
+     // Hands-On Project 5-2: Step 4
+     if (window.addEventListener) {
+       window.addEventListener('load', createEventListener, false);
+     } else if (window.attachEvent) {
+       window.attachEvent('onload', createEventListener);
+     }
+   </script>
 </body>
 </html>
