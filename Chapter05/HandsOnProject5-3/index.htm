@@ -61,9 +61,9 @@
       var propertyHeight = 100;
       var winLeft = ((screen.width - propertyWidth) / 2);
       var winTop = ((screen.height - propertyHeight) / 2);
-      winOptions = 'width = 300, hegiht = 100';
-      winOptions += ',left' + winLeft;
-      winOptions += ',top' + winTop;
+      var winOptions = 'width = 300, hegiht = 100';
+      winOptions += ',left=' + winLeft;
+      winOptions += ',top=' + winTop;
       confirmWindow = window.open('confirm.htm', 'confirm', winOptions);
       setTimeout('confirmWindow.close()', 5000);
     }
