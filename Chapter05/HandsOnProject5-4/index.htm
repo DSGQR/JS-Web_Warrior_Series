@@ -4,7 +4,7 @@
    <!--
       JavaScript 6th Edition
       Chapter 5
-      Hands-on Project 5-2
+      Hands-on Project 5-4
 
       Author: Daniel Amini
       Date:   03/17/2020
@@ -13,7 +13,7 @@
    -->
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Hands-on Project 5-2</title>
+   <title>Hands-on Project 5-4</title>
    <link rel="stylesheet" href="styles.css" />
    <script src="modernizr.custom.05819.js"></script>
 </head>
@@ -21,7 +21,7 @@
 <body>
    <header>
       <h1>
-         Hands-on Project 5-2
+         Hands-on Project 5-4
       </h1>
    </header>
 
@@ -53,7 +53,7 @@
 
    </article>
    <script>
-     // Hands-On Project 5-2: Step 2
+     
      function processInput() {
        var propertyWidth = 300;
        var propertyHeight = 100;
@@ -65,7 +65,6 @@
        window.open('confirm.htm', 'confirm', winOptions);
      }
 
-     // Hands-On Project 5-2: Step 3
      function createEventListener() {
        var submitButton = document.getElementById('submit');
        if (submitButton.addEventListener) {
@@ -75,12 +74,12 @@
        }
      }
 
-     // Hands-On Project 5-2: Step 4
      if (window.addEventListener) {
        window.addEventListener('load', createEventListener, false);
      } else if (window.attachEvent) {
        window.attachEvent('onload', createEventListener);
      }
+     
    </script>
 </body>
 </html>

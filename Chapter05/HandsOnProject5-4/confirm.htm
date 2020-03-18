@@ -4,10 +4,10 @@
    <!--
       JavaScript 6th Edition
       Chapter 5
-      Hands-on Project 5-2
+      Hands-on Project 5-4
 
-      Author: 
-      Date:   
+      Author: Daniel Amini
+      Date:   03/17/2020
 
       Filename: index.htm
    -->
@@ -33,5 +33,33 @@
 
 <body>
    <p>Your address has been updated.</p>
+   <!-- Hands-On Project: Step 3, Page 359 -->
+   <p id="closeB">Close</p>
+
+   <!-- Hands-On Project: Step 4 -->
+   <script>
+      // Hands-On Project: Step 5
+      function closeWindow() {
+         window.close();
+      }
+      
+      // Hands-On Project: Step 6
+      // add event listener to Close button
+      function createEventListener() {
+         var closeButton = document.getElementById('closeB');
+         if (closeButton.addEventListener) {
+            closeButton.addEventListener('click', closeWindow, false);
+         } else if (closeButton.attachEvent) {
+            closeButton.attachEvent('onclick', closeWindow);
+         }
+      }
+
+      // Hands-On Project: Step 7
+      if (window.addEventListener) {
+         window.addEventListener('load', createEventListener, false);
+      } else if (window.attachEvent) {
+         window.attachEvent('onload', createEventListener);
+      }
+   </script>
 </body>
 </html>
