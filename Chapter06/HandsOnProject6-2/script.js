@@ -1,5 +1,5 @@
 /* 
-   Hands-On Project: 6-1 
+   Hands-On Project: 6-2 
    Name: Daniel Amini
    Date: 03/20/2020
 */
