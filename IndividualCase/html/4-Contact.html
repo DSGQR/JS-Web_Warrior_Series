@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  <title>Contact Me</title>
+  <link rel="stylesheet" href="../css/contact.css">
+  <title>Contact</title>
 </head>
 
 <body>
@@ -24,7 +26,91 @@
   </nav>
 
   <!-- Body -->
-  <main class="indigo lighten-3">
+  <main class="valign-wrapper black white-text">
+    <div class="container">
+      <div class="row">
+        <h4 class="center align">
+          Reach Out And Say Hello!
+        </h4>
+      </div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">email</i>
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">phone</i>
+              <input id="icon_telephone" type="tel" class="validate">
+              <label for="icon_telephone">Telephone</label>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="input-field col s6">
+                <h5 class="align right teal-text text-darken-1">
+                  Preferred Method of Contact:
+                </h5>
+              </div>
+              <div class="input-field col s6">
+                <p>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>Phone Call</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>Text Messaging</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>Email</span>
+                  </label>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s8 offset-s2">
+                  <i class="material-icons prefix">mode_edit</i>
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1">Your Message</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </form>
+      </div>
+      <div class="right-align">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </div>
+
 
   </main>
 
@@ -33,26 +119,11 @@
   <!-- Footer -->
   <footer class="page-footer grey darken-3">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">Footer Content Details</p>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2020 Copyright
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        © 2019 Copyright
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
       </div>
     </div>
   </footer>
@@ -60,6 +131,7 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="../JavaScript/modernizr.custom.05819.js"></script>
+  <script src="../JavaScript/form.js"></script>
 </body>
 
 </html>
