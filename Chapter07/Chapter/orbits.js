@@ -12,13 +12,13 @@
 
 'use strict'; // Interpret contents in JavaScript stict mode
 
-// Full Code: 470 - 472
 // Page 467
 var dateObject = new Date();
 
 /*-------------------------------------------------------------------------------------------------*/
 /*----------------------------------- DISPLAY CALENDAR FUNCTION -----------------------------------*/
 /*-------------------------------------------------------------------------------------------------*/
+// Full Code: 470 - 472
 function displayCalendar(whichMonth) {
     // Page 468
 	var date;
