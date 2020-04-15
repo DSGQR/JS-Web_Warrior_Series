@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
    <!--
       JavaScript 6th Edition
       Chapter 7
       Hands-on Project 7-2
 
-      Author: 
-      Date:   
+      Author: Daniel Amini
+      Date:   04/15/2020 
 
       Filename: index.htm
+
+      Purpose: 
+      In this project, you’ll create an app that provides the day of the week for any date a user enters. 
+      You’ll also explore the different interfaces available for selecting dates in modern browsers.
    -->
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -28,20 +33,57 @@
    <article>
       <h2>Day of the Week Lookup</h2>
       <form>
-          <fieldset>
+         <fieldset>
             <label for="dateSelected">
-              Select a date
+               Select a date
             </label>
             <input type="date" id="dateSelected" />
-          </fieldset>
-          <fieldset class="button">
+         </fieldset>
+         <fieldset class="button">
             <button type="button" id="determineDay">Find day</button>
-          </fieldset>
-          <fieldset>
-             <p>Day of the Week</p>
+         </fieldset>
+         <fieldset>
+            <p>Day of the Week</p>
             <p id="day"></p>
-          </fieldset>
-     </form>
+         </fieldset>
+      </form>
    </article>
+   <script>
+      var selection = document.getElementById('dateSelected');
+      var result = document.getElementById('day');
+      var allDaysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      var selectedDate;
+      var dayOfWeekNumber;
+      var dayOfWeekName;
+
+      function lookUpDay() {
+         selectedDate = new Date(selection.value);
+         selectedDate.setUTCHours(12);
+         dayOfWeekNumber = selectedDate.getUTCDay();
+         dayOfWeekName = allDaysOfWeek[dayOfWeekNumber];
+         result.innerHTML = dayOfWeekName;
+      }
+
+      // add event listenr to Find day button and clear form
+      function createEventListener() {
+         var submitButton = document.getElementById('determineDay');
+         if (submitButton.addEventListener) {
+            submitButton.addEventListener('click', lookUpDay, false);
+         } else if (submitButton.attachEvent) {
+            submitButton.attachEvent('onclick', lookUpDay);
+         } 
+         document.getElementById('dateSelected').value = '';
+         // clearn last starting value on reload
+         document.getElementById('day').innerHTML = '';
+         // clear previous result on reload
+      }
+
+      if (window.addEventListener) {
+         window.addEventListener('load', createEventListener, false);
+      } else if (window.attachEvent) {
+         window.attachEvent('onload', createEventListener);
+      }
+   </script>
 </body>
+
 </html>
