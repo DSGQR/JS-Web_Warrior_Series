@@ -9,15 +9,17 @@
       Filename: index.htm
 
       Purpose:
-      In this project, you’ll create a custom object containing delivery information entered by a user on a pizza 
-      delivery order form, and then you’ll display the object property values in a confirmation section on the same page.
+			In this project, you’ll create a custom object containing 
+			delivery information entered by a user on a pizza delivery 
+			order form, and then you’ll display the object property 
+			values in a confirmation section on the same page.
 */
 
 'use strict'; // Interpret contents in JavaScript stict mode
 
 var delivInfo = {};
 var delivSummary = document.getElementById('deliverTo');
-
+ 
 function processDeliveryInfo() {
 	var prop;
 	delivInfo.name = document.getElementById('nameinput').value;
@@ -29,11 +31,12 @@ function processDeliveryInfo() {
 	for (prop in delivInfo) {
 		delivSummary.innerHTML += '<p>' + delivInfo[prop] + '</p>';
 	}
+	document.getElementById("deliverTo").style.display = "block";
 }
 
 function previewOrder() {
 	processDeliveryInfo();
-    document.getElementById('summary').style.display = 'block';
+  document.getElementsByTagName("section")[0].style.display = 'block';
 }
 
 function createEventListener() {
